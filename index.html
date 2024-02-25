@@ -4,44 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/normalize.css">
     <title>Encriptador</title>
 </head>
 <body>
-    <!--Cabecera-->
-<header>
-    <div class="contenedor-1">
-        <div class="logo">
-            <div class="vector">
-                <img src="/style/vector-a.png" alt="Logo Alura">
-            </div>
+    <div class="contenedor">
+        <div class="encriptar">
+            <textarea 
+            name="texto" 
+            id="texto" 
+            class="texto" 
+            cols="30" 
+            rows="10" 
+            placeholder="Que deseas encriptar?"
+            ></textarea>
         </div>
-    </div>
-</header>
-    <!--Cuerpo-->
-<main>
-    <div class="contenedor-2">
-        <div class="texto">         
-            <textarea type="text" name="text" rows="20" cols="60" class="input" placeholder="Inserte el texto que desee encriptar o desencriptar"></textarea>
+        <div class="terminos">
+            <p>Solo letras minisculas y sin acentos.</p>
         </div>
-                <div class="rectangulo">
-            <div class="dibujo">
-                <img src="/style/Muñeco.png" alt="">
-            </div>
-            <div class="cuadro-1">
-            <h2 >No se encontro mensaje</h2>
-            </div>
-        </div>
-        <p class="parrafo">Solo minusculas y sin acentos</p> 
         <div class="botones">
-            <button class="button1"><p>Encriptar</p></button>
-            <button class="button2"><p>Des-encriptar</p></button>
-        </div>    
+            <button class="btn-encriptar" type="button" onclick="encriptar()">Encriptar</button>
+            <button class="btn-desencriptar" type="button" onclick="desencriptar()">Desencriptar</button>
+        </div>
+        <div class="encriptado">
+            <img src="style/Muñeco.png" alt="" id="Muñeco">
+            <div class="mensaje-encriptado" id="mensaje-encriptado">
+                <h2 id="titulo-mensaje">Ningun mensaje encontrado</h2>
+                <p class="parrafo">Ingresa el texto.</p>
+                <textarea 
+                name="mensaje" 
+                id="mensaje" 
+                cols="30" 
+                rows="10"
+                class="mensaje"
+                ></textarea>
+            </div>
+        </div>
     </div>
-</main>
+    <script src="script/script.js"></script>
 </body>
-<footer>
-    <div class="contenedor-3">
-        <p>Desarrollador-Jaime Perez</p>
-    </div>
-</footer>
 </html>
