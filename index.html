@@ -1,39 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/normalize.css">
-    <title>Encriptador</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+    <title>Encriptador challenge</title>
 </head>
 <body>
-    <div class="contenedor">
-        <div class="encriptar">
-            <textarea 
-            name="texto" 
-            id="texto" 
-            class="texto" 
-            cols="30" 
-            rows="10" 
-            placeholder="Que deseas encriptar?"
-            ></textarea>
-        </div>
-        <div class="terminos">
-            <p>Solo letras minisculas y sin acentos.</p>
-        </div>
-        <div class="botones">
-            <button class="btn-encriptar" type="button" onclick="encriptar()">Encriptar</button>
-            <input class="btn-desencriptar" type="button" onclick="desencriptar()" value="Desencriptar">
-        </div>
-        <div class="encriptado">
-            <img src="style/Muñeco.png" alt="" id="Muñeco">
-            <div class="mensaje-encriptado" id="mensaje-encriptado">
-                <h2 id="titulo-mensaje">Ningun mensaje encontrado</h2>
-                <p class="parrafo">Ingresa el texto que deseas recuperar</p>
+    <header>
+        <img class="logo" src="style/Logo.svg" alt="logo">
+    </header>
+    <main>
+        <section class="seccion1">
+            <div class="contenedorcajatexto">
+                <textarea placeholder="Ingrese el texto aqui" class="cajatexto"></textarea>
             </div>
-        </div>
-    </div>
+            <div class="alerta">
+                <img src="style/alerta.svg" alt="alerta">
+                <p>Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="contenedor-botones">
+                <input type="button" class="btn-encriptar" value="Encriptar">
+                <input type="button" class="btn-desencriptar" value="Desencriptar">
+            </div>
+        </section>
+        <section class="seccion2">
+            <div class="contenedormunieco">
+                <img src="style/Muñeco.svg" alt="muñico">
+            </div>
+            <div class="contenedor-parrafo">
+                <h3>Nigún mensaje fue <br> encontrado</h3>
+                <p>Ingresa el texto que desees encriptar o <br> desencriptar.</p>
+            </div>
+            <div class="contenedor-copiar">
+                <input type="button" class="btn-copiar" value="Copiar">
+            </div>
+            <div class="contenedor-resultado">
+                <p class="texto-resultado"></p>
+            </div>
+
+        </section>
+    </main>
     <script src="script/script.js"></script>
 </body>
 </html>
